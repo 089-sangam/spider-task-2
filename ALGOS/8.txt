@@ -1,0 +1,33 @@
+https://www.hackerrank.com/challenges/kangaroo/problem
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int main(){
+    int a,b,c,d;
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    if(a<c&&b>d){
+        while(a<=c){
+            a+=b;
+            c+=d;
+            if(a==c){
+                printf("YES");
+                
+            }
+        }   
+        if(a-b!=c-d)
+        printf("NO");
+    }
+    else
+    printf("NO");
+
+    return 0;
+}

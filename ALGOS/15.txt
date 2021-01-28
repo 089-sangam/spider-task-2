@@ -1,0 +1,29 @@
+https://www.hackerrank.com/challenges/counting-valleys/problem
+
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int n,t=0,r=0;
+    scanf("%d",&n);
+    char s[n+1];
+    scanf("%s",s);
+   for(int i=0;s[i]!='\0';i++){
+       if(s[i]=='U')
+       t++;
+       else
+       t--;
+       if(t==0 && s[i]=='U')
+       r++;
+   }
+   printf("%d",r);
+   return 0; 
+}

@@ -1,0 +1,31 @@
+https://www.hackerrank.com/challenges/bon-appetit/problem
+
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int n,k,b,c=0,d;
+    scanf("%d%d",&n,&k);
+    int a[n];
+    for(int i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    scanf("%d",&b); 
+    for(int i=0;i<n;i++){
+        if(i!=k)
+        c+=a[i];
+    }
+    d=b-(c/2);
+    if(d>0)
+    printf("%d",d);
+    else 
+    printf("Bon Appetit");
+    return 0;       
+}

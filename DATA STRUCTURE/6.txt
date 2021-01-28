@@ -1,0 +1,30 @@
+https://www.hackerrank.com/challenges/plus-minus/problem
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(){
+int n;
+scanf("%d",&n);
+int a[n];
+for(int i=0; i<n;i++){
+    scanf("%d",&a[i]);
+}
+float t=0,r=0,s=0;
+ for(int i=0;i<n;i++){
+ if(a[i]>0)
+ t++;
+ else if(a[i]<0)
+ r++;
+ else
+ s++;
+ }
+ printf("%f\n%f\n%f",t/n,r/n,s/n);
+ return 0;
+}

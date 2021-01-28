@@ -1,0 +1,33 @@
+https://www.hackerrank.com/challenges/electronics-shop/problem
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+  
+    int b,n,m,t=0,r=0;
+    scanf("%d%d%d",&b,&n,&m);
+    int k[n],d[m];
+    for(int i=0;i<n;i++)
+    scanf("%d",&k[i]);
+    for(int i=0;i<m;i++)
+    scanf("%d",&d[i]);
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<m;j++){
+            r=(k[i]+d[j]);
+          if(r<=b && t<r )
+          t=r;  
+        }
+    }
+    if(t==0)
+    printf("-1");
+    else
+    printf("%d",t);
+    return 0;
+}

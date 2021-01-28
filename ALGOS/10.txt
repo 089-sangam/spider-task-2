@@ -1,0 +1,28 @@
+https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int n,k,t,r=0;
+    scanf("%d%d",&n,&k);
+    int a[n];
+    for(int i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    for(int i=0;i<n;i++){
+        for(int j=1;i+j<n;j++){
+         t=a[i]+a[i+j];
+         if(t%k==0)
+         r++;   
+        }
+    }
+    printf("%d",r);
+    return 0;
+}

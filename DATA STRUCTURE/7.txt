@@ -1,0 +1,31 @@
+https://www.hackerrank.com/challenges/the-birthday-bar/problem
+
+#include <assert.h>
+#include <ctype.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int n,d,m,t=0,r=0;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+    scanf("%d",&a[i]);
+    scanf("%d%d",&d,&m);
+    for(int i=0;i<n-m+1;i++){
+        for(int j=0;j<m;j++){
+         t+=a[i+j];   
+        }
+        if(t==d)
+        r++;
+        t=0;
+    }
+    printf("%d",r);
+    return 0;
+}

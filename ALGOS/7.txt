@@ -1,0 +1,31 @@
+https://www.hackerrank.com/challenges/apple-and-orange/problem
+
+#include <assert.h>
+#include <limits.h>
+#include <math.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+int main(){
+    int s,t,a,b,m,n,y=0,z=0;
+    scanf("%d%d%d%d%d%d",&s,&t,&a,&b,&m,&n);
+    int c[m],d[n];
+    for(int i=0;i<m;i++)
+    scanf("%d",&c[i]);
+    for(int i=0;i<n;i++)
+    scanf("%d",&d[i]);
+    for(int i=0;i<m;i++){
+        if((c[i]+a)>=s&&(c[i]+a)<=t)
+        y++;
+    }
+     for(int i=0;i<n;i++){
+        if((d[i]+b)>=s&&(d[i]+b)<=t)
+        z++;
+     }
+    printf("%d\n%d",y,z);
+    return 0;
+}
